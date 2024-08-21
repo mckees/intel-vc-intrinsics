@@ -1,0 +1,28 @@
+Source: intel-vc-intrinsics
+Section: libs
+Priority: optional
+Maintainer: Shane McKee <shane.mckee@canonical.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ llvm-14,
+Standards-Version: 4.6.2
+Homepage: https://github.com/intel/vc-intrinsics
+
+Package: intel-vc-intrinsics
+Architecture: amd64
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Contains the Intel VC Intrinsics
+ VC Intrinsics project contains a set of new intrinsics on top of core LLVM IR
+ instructions that represent SIMD semantics of a program targeting GPU. This
+ set is now used by:
+ * CMC - https://github.com/intel/cm-compiler
+ * DPC++ - https://github.com/intel/llvm
+ * ISPC - https://github.com/ispc/ispc
+ frontend compilers and
+ * IGC VC backend - https://github.com/intel/intel-graphics-compiler
+ For more information: https://github.com/intel/vc-intrinsics

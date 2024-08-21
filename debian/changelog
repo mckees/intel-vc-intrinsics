@@ -1,0 +1,7 @@
+intel-vc-intrinsics (0.4.0-0ubuntu1-ppa1) oracular; urgency=medium
+
+  * Initial release
+  * Guessed at possible version number since no release in years
+  * Commit HEAD: e1e2f81165ae75576a0201f342e7f1ea2ca40273
+
+ -- Shane McKee <shane.mckee@canonical.com>  Thu, 11 Jul 2024 19:30:21 +0800

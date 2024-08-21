@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --builddirectory build --buildsystem=cmake
+
+override_dh_auto_configure:
+	mkdir -p install-fepre
+	mkdir -p build
+	cd build && \
+	cmake .. \
+               -Wno-dev \
+               -DCMAKE_BUILD_TYPE=Release \
+               -DCMAKE_INSTALL_PREFIX=$(pwd)/install-fepre \
+               -DLLVM_DIR=$(pwd)/install-fepre/lib/cmake/llvm
+override_dh_auto_clean:
+	rm -rf install-fepre
+	rm -rf build
+	dh_auto_clean
